@@ -1,7 +1,19 @@
+
 window.addEventListener("DOMContentLoaded", () => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add("body-main-dark");
-    } else {
-        document.body.classList.remove("body-main-dark");
+    const prefersDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    );
+
+    function applyColorScheme() {
+        document.body.classList.toggle(
+            "page-body--dark",
+            prefersDarkMode.matches
+        );
     }
+
+    // Apply the browser's current color scheme.
+    applyColorScheme();
+
+    // Update the page if the browser color scheme changes.
+    prefersDarkMode.addEventListener("change", applyColorScheme);
 });
