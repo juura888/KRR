@@ -564,6 +564,12 @@ body.page-body--dark .social-link--instagram:hover {
     font-size: 24px;
 }
 
+.footer-regnum {
+    margin: 0 0 8px;
+    color: var(--color-light);
+    font-size: 20px;
+}
+
 .footer-email {
     display: inline-block;
     color: var(--color-light);
@@ -716,6 +722,10 @@ body.page-body--dark .social-link--instagram:hover {
 
     .footer-company {
         font-size: 22px;
+    }
+
+        .footer-regnum {
+        font-size: 18px;
     }
 
     .footer-email {
